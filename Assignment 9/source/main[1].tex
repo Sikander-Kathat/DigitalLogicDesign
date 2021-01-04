@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{karnaugh-map}
+\title{Assignment 9 (GATE, EC2018,18)}
+\author{SIKANDER KATHAT }
+\date{25 December 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{ Question  18 MUX diagram }
+\begin{figure}[!ht]
+\centering
+{
+\input{figure3.tex}
+}
+\caption{question MUX diagram}
+\label{MUX diagram)}
+\end{figure}
+
+\section{Question 18}
+A 4:1 multiplexer is to be used for generating the output carry of a full adder. A and B are the bits to be added while C(in) is the input carry and Co/t is the output carry. A and B are to be used as select bits with A being more significant select bit.
+
+Which one of the following statement correctly describes the choice of signals to be connected to the inputs I(0), I(1), I(2) and I(3) so that the output is Co/t?
+
+\begin{enumerate}
+    \item$I(0)=0,I(1)=C(in),I(2)=C(in),I(3)=1$
+    \item$I(0)=1,I(1)=C(in),I(2)=C(in),I(3)=1$
+    \item$I(0)=C(in),I(1)=0,I(2)=1,I(3)=C(in)$
+    \item$I(0)=0,I(1)=C(in),I(2)=1,I(3)=C(in)$
+\end{enumerate}
+
+\section{Solution}
+\begin{table}[!ht]
+{
+\input{table2.tex}
+}
+\caption{TRUTH TABLE}
+\label{table}
+\end{table}
+
+
+\begin{figure}[!ht]
+\centering
+{
+\input{figure1.tex}
+}
+\caption{k-map for Sum(S)}
+\label{kmap Sum(S)}
+\end{figure}
+
+
+    
+    Boolean expression for Sum(S)-
+    
+    S=A$\overline{B}$ $\overline{C(in)}$ + $\overline{A}$ $\overline{B}$ C(in) + $\overline{A}$ B $\overline{C(in)}$ + ABC(in)
+\newpage
+
+\begin{figure}[!ht]
+\centering
+{
+\input{figure2.tex}
+}
+\caption{k-map for Co/t}
+\label{kmap Co/t}
+\end{figure}
+ 
+ Boolean expression for Co/t-
+
+Co/t= BC(in) + AB + AC(in)
+
+\begin{table}[!ht]
+\centering
+{
+\input{table1.tex}
+}
+\caption{TRUTH TABLE for Co/t to be output}
+\label{table 1 }
+\end{table}
+So, by the truth table for Co/t to be output,
+we get 
+
+
+{I(0)=0, I(1)= C(in), I(2)= C(in) and I(3)= 1}
+\end{document};
+
+

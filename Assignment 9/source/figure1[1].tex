@@ -1,0 +1,15 @@
+\begin{karnaugh-map}[4][2][1][][]
+    \maxterms{0,3,5,6}
+    \minterms{1,2,4,7}
+    \implicant{1}{1}
+    \implicant{2}{2}
+    \implicant{4}{4}
+    \implicant{7}{7}
+    % note: position for start of \draw is (0, Y) where Y is
+    % the Y size(number of cells high) in this case Y=2
+    \draw[color=black, ultra thin] (0, 2) --
+    node [pos=1, above right, anchor=south west] {$BC(in)$} % YOU CAN CHANGE NAME OF VAR HERE, THE $X$ IS USED FOR ITALICS
+    node [pos=1, below left, anchor=north east] {$A$} % SAME FOR THIS
+    ++(135:1);
+        
+    \end{karnaugh-map}

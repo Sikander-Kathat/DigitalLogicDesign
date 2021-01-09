@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+\draw (0,0)coordinate (O)--++(30:1)coordinate (P)--++(90:4)coordinate (Q)--++(150:1)coordinate (R)--cycle;
+\draw($(P)!0.5!(Q)$)--++(0:1)node[right]{$C_o_u_t$};
+\draw($(O)!0.5!(P)$)--++(-90:1)--++(180:2)node[left]{$B(S_0)$};
+\draw($(O)!0.25!(P)$)--++(-90:0.5)--++(180:1.75)node[left]{$A(S_1)$};
+\foreach\y/\t in {0.1/_0,0.3/_1,0.5/_2,0.7/_3} {
+\draw ($(R)!\y*1.1!(O)$)--++(180:1)node[left]{$I\t$};}
+\end{tikzpicture}
